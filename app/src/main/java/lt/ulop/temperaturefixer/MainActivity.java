@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.activeandroid.ActiveAndroid;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        ActiveAndroid.initialize(this);
     }
 
     @Override
@@ -84,9 +88,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_add_history) {
             // Handle the camera action
         } else if (id == R.id.nav_show_history) {
-
+            Intent intent = new Intent(MainActivity.this, IllnesHistoryes.class);
+            startActivity(intent);
         } else if (id == R.id.nav_settings) {
-//лол
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

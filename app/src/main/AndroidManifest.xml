@@ -23,6 +23,31 @@
             android:label="@string/title_activity_add_event"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lt.ulop.temperaturefixer.MainActivity" />
+        </activity>
+        <activity
+            android:name=".content_settings_Activity"
+            android:label="@string/title_activity_content_settings_"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".IllnesHistoryes"
+            android:label="@string/title_activity_illnes_historyes"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lt.ulop.temperaturefixer.MainActivity" />
+        </activity>
+        <meta-data android:name="AA_DB_NAME" android:value="temperature.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="1" />
     </application>
 
 </manifest>
