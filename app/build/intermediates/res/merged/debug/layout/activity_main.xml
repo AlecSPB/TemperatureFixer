@@ -13,5 +13,6 @@
         android:layout_gravity="start" android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main" app:menu="@menu/activity_main_drawer" />
 
+
 </android.support.v4.widget.DrawerLayout>
-<!-- From: file:/E:/develop/Projects/TemperatureFixer/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/C:/Users/user/AndroidStudioProjects/TemperatureFixer1/app/src/main/res/layout/activity_main.xml -->

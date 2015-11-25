@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +14,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.activeandroid.ActiveAndroid;
+import com.activeandroid.query.Select;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -45,7 +50,20 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         ActiveAndroid.initialize(this);
+
+        Button log = (Button) findViewById(R.id.LogButton);
+        log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<AddTemp> list = new Select().from(AddTemp.class).execute();
+                for (AddTemp temp:list) {
+                    Log.i("TAG", temp.Pill + ":" + temp.Time);
+                }
+            }
+        });
     }
+
+
 
     @Override
     public void onBackPressed() {
