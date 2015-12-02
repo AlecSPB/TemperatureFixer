@@ -9,6 +9,13 @@
         <dex dex="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\pre-dexed\debug\activeandroid-3.1.0-SNAPSHOT-50c27b8f7d5d3811d9ba94a18a447769e125e6f0.jar" />
     </item>
     <item
+        jar="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\exploded-aar\com.wdullaer\materialdatetimepicker\2.0.2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b945f88f2ae85cf22563e9f512fc34dd3d5652e4">
+        <dex dex="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\pre-dexed\debug\classes-bb523a5a55633a8aa6dfd0a437d42fc06eab2989.jar" />
+    </item>
+    <item
         jar="C:\develop\android-sdk-windows\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.1"
