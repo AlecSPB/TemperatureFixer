@@ -23,4 +23,12 @@
         android:layout_below="@+id/textView10"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="29dp" />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/temperatureChart"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/LogButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

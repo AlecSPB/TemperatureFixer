@@ -8,14 +8,14 @@ import java.util.Date;
 
 @Table(name = "temperature")
 public class AddTemp extends Model {
-    public AddTemp(String temperature, Date time, String pill) {
+    public AddTemp(float temperature, Date time, String pill) {
         Temperature = temperature;
         Time = time;
         Pill=pill;
     }
 
     @Column(name = "Temperature")
-    String Temperature;
+    float Temperature;
     @Column(name = "Time")
     Date Time;
     @Column(name = "Pill")

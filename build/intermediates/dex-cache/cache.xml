@@ -2,25 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.michaelpardo\activeandroid\3.1.0-SNAPSHOT\4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08\activeandroid-3.1.0-SNAPSHOT.jar"
+        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.1.6\b036abbb61656165da99cf44898e4b9123687e65\MPAndroidChart-v2.1.6.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
-        <dex dex="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\pre-dexed\debug\activeandroid-3.1.0-SNAPSHOT-50c27b8f7d5d3811d9ba94a18a447769e125e6f0.jar" />
-    </item>
-    <item
-        jar="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\exploded-aar\com.wdullaer\materialdatetimepicker\2.0.2\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="b945f88f2ae85cf22563e9f512fc34dd3d5652e4">
-        <dex dex="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\pre-dexed\debug\classes-bb523a5a55633a8aa6dfd0a437d42fc06eab2989.jar" />
-    </item>
-    <item
-        jar="C:\develop\android-sdk-windows\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-1c806b947d030096470e7fb7cf3ed65f7c4764a2.jar" />
+        sha1="b036abbb61656165da99cf44898e4b9123687e65">
+        <dex dex="C:\Users\user\AndroidStudioProjects\TemperatureFixer1\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v2.1.6-dc70d17cc529fc093ea9ef77a3f307903ee248d3.jar" />
     </item>
 
 </items>

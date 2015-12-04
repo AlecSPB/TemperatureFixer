@@ -7,9 +7,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
@@ -33,7 +36,10 @@ public class AddEvent extends AppCompatActivity implements com.wdullaer.material
         editTime = (EditText)findViewById(R.id.editTime);
 
         editPill = (EditText)findViewById(R.id.editPill);
-
+        String[] pills = {"Ибупрофен", "Нурофен", "Парацетамол", "Анальгин"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, pills);
+        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.editPill);
+        autoCompleteTextView.setAdapter(adapter);
         editTime.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
@@ -56,7 +62,7 @@ public class AddEvent extends AppCompatActivity implements com.wdullaer.material
             public void onClick(View view) {
                 AddTemp addTemp = new AddTemp();
 
-                addTemp.Temperature = editTemperature.getText().toString();
+                addTemp.Temperature = Float.parseFloat(editTemperature.getText().toString());
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy hh:mm");
                 try {
                     addTemp.Time = dateFormat.parse(editTime.getText().toString());
@@ -66,6 +72,10 @@ public class AddEvent extends AppCompatActivity implements com.wdullaer.material
                 addTemp.Pill = editPill.getText().toString();
 
                 addTemp.save();
+
+                Toast toast = Toast.makeText(getApplicationContext(),
+                        "Сохранено", Toast.LENGTH_SHORT);
+                toast.show();
                 finish();
             }
         });
