@@ -16,9 +16,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Добавьте значение температуры:"
             android:id="@+id/addTemperature"
+            android:layout_marginTop="23dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp" />
+            android:layout_centerHorizontal="true" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -27,8 +27,12 @@
             android:ems="10"
             android:id="@+id/editTemperature"
             android:layout_below="@+id/addTemperature"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp" />
+            android:layout_alignLeft="@+id/editPill"
+            android:layout_alignStart="@+id/editPill"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,9 +40,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Выберите выпитую таблетку:"
             android:id="@+id/textView8"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/editTemperature"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
 
 
         <AutoCompleteTextView
@@ -48,8 +52,13 @@
             android:ems="10"
             android:id="@+id/editPill"
             android:layout_below="@+id/textView8"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignRight="@+id/editTime"
+            android:layout_alignEnd="@+id/editTime"
+            android:layout_marginRight="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,7 +67,8 @@
             android:text="Время добавления:"
             android:id="@+id/textView9"
             android:layout_below="@+id/editPill"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -67,8 +77,13 @@
             android:ems="10"
             android:id="@+id/editTime"
             android:layout_below="@+id/textView9"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
 
     </RelativeLayout>
 

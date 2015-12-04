@@ -55,10 +55,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/editSurename"
         android:layout_alignTop="@+id/textView3"
-        android:layout_alignRight="@+id/editName"
-        android:layout_alignEnd="@+id/editName"
         android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_alignRight="@+id/editName"
+        android:layout_alignEnd="@+id/editName" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -95,29 +94,59 @@
         android:layout_height="wrap_content"
         android:id="@+id/editTall"
         android:layout_below="@+id/editSurename"
-        android:layout_alignRight="@+id/editSurename"
-        android:layout_alignEnd="@+id/editSurename"
         android:layout_alignLeft="@+id/editSurename"
-        android:layout_alignStart="@+id/editSurename" />
+        android:layout_alignStart="@+id/editSurename"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editWeight"
         android:layout_below="@+id/editTall"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/editTall"
-        android:layout_alignStart="@+id/editTall" />
+        android:layout_alignStart="@+id/editTall"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editOld"
         android:layout_below="@+id/editWeight"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/editWeight"
-        android:layout_alignStart="@+id/editWeight" />
+        android:layout_alignStart="@+id/editWeight"
+        android:layout_toStartOf="@+id/textView12"
+        android:layout_toLeftOf="@+id/textView12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="см"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/editTall"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="кг"
+        android:id="@+id/textView11"
+        android:layout_above="@+id/editOld"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="лет"
+        android:id="@+id/textView12"
+        android:layout_alignBottom="@+id/editOld"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

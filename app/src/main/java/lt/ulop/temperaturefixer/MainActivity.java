@@ -2,10 +2,12 @@ package lt.ulop.temperaturefixer;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.query.Select;
@@ -51,11 +54,21 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+        drawer.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                UserInfo user = UserInfo.load(UserInfo.class, 1);
+                if (b && drawer.isDrawerOpen(Gravity.LEFT) && user != null) {
+                    ((TextView) findViewById(R.id.navName)).setText(user.Name + " " + user.SureName);
+                    ((TextView) findViewById(R.id.navTextView)).setText(user.Age + " лет, " + user.Height + " см, " + user.Weight + " кг");
+                }
+            }
+        });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -67,7 +80,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 List<AddTemp> list = new Select().from(AddTemp.class).execute();
-                for (AddTemp temp:list) {
+                for (AddTemp temp : list) {
                     Log.i("TAG", temp.Pill + ":" + temp.Time + ":" + temp.Temperature);
                 }
             }
@@ -202,6 +215,13 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto", "uloplt@gmail.com", null));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "<h5>Заголовок пятого уровня</h5>");
+
+            startActivity(Intent.createChooser(emailIntent, "Send email..."));
             return true;
         }
 
